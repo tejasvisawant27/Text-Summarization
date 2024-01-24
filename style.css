@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+form label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    height: 200px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+    background-color: #a8df29;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+

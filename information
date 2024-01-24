@@ -1,0 +1,26 @@
+ The glove.6B.100d.txt file is used in the text summarization code as a pre-trained word embedding model. Word embeddings are dense vectors representing each word in a high-dimensional space, where the position of the word in the space reflects the meaning and context of the word.
+
+The glove.6B.100d.txt file is a pre-trained word embedding model trained on a large corpus of text data, which contains 6 billion tokens and 100-dimensional word vectors for a vocabulary of 400,000 words. This file provides an efficient way to represent the meaning of words in the summarization process, where the text is converted into a vector representation using the pre-trained word embeddings.
+
+
+This code implements a text summarization algorithm using the PageRank algorithm. The input text is tokenized into sentences, and sentence embeddings are generated using pre-trained word embeddings from the GloVe algorithm. The similarity between sentences is calculated using the cosine distance between their embeddings, and then the PageRank algorithm is applied to calculate the importance scores of each sentence based on the similarity scores. Finally, the top-ranked sentences are selected to form the summary.
+
+The Flask web framework is used to create a web interface for the summarization algorithm. The index.html file contains a simple form for the user to input the text to be summarized, and the result.html file displays the summarized text. When the user submits the form, the text is sent to the summarize() function via a POST request. The summarize() function then calls the summary() function to generate the summary, and the result is returned to the result.html file for display.
+
+
+No, the code does not use LexRank algorithm. It uses the PageRank algorithm for calculating the sentence importance scores. However, the cosine similarity matrix between the sentence embeddings is used as the adjacency matrix for the PageRank algorithm, which is a similar approach used in LexRank algorithm.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Summary</h1>
+    </header>
+    <div class="container">
+        <p>{{ summary }}</p>
+    </div>
+</body>
+</html>
